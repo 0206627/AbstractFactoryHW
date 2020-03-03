@@ -4,19 +4,19 @@ using AbstractFactoryHW.Models;
 
 namespace AbstractFactoryHW.Factory
 {
-    public class TurboPlus : IFactory
+    public class TurboPlusFactory : IFactory
     {
-        public TurboPlus()
+        public TurboPlusFactory()
         {
         }
 
-        public float crearCivic(int qty)
+        public float crearCRV(int qty)
         {
             var crv = new CRVCar((float)PricesCRV.TurboPlus);
             return crv.getTotal(qty);
         }
 
-        public float crearCRV(int qty)
+        public float crearCivic(int qty)
         {
             var civic = new CivicCar((float)PricesCivic.TurboPlus);
             return civic.getTotal(qty);

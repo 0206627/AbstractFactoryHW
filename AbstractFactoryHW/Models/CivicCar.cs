@@ -1,10 +1,18 @@
 ﻿using System;
 namespace AbstractFactoryHW.Models
 {
-    public class CivicCar
+    public class CivicCar : ICar
     {
-        public CivicCar()
+        private float _price;
+
+        public CivicCar(float price)
         {
+            this._price = price;
+        }
+
+        public float getTotal(int qty)
+        {
+            return qty * this._price;
         }
     }
 }
